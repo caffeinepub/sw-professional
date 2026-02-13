@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build an app for SW PROFESSIONAL focused on cosmetic hair care products (shampoo, hair mask, hair serum) promoting reduced hair fall, smoother hair, and a stronger scalp.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Premium cosmetic hair-care hero banner with elegant studio lighting and abstract hair strands, warm neutral palette (sw-professional-hero.dim_1600x900.png)\n- Minimal premium wordmark logo reading “SW PROFESSIONAL”, monochrome/neutral, transparent background (sw-professional-logo.dim_512x512.png)\n- Product packshot-style image of a shampoo bottle, premium cosmetic style, neutral background (product-shampoo.dim_1024x1024.png)\n- Product packshot-style image of a hair mask jar/tub, premium cosmetic style, neutral background (product-hair-mask.dim_1024x1024.png)\n- Product packshot-style image of a hair serum dropper bottle, premium cosmetic style, neutral background (product-hair-serum.dim_1024x1024.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-public-landing-page-for-the-app-named-sw-professional-that-clearly-presents-the-brand-and-its-hair-care-positioning-around-0-level-hair-fall-smoothing-hair-and-strong-scalp-hair",
+      "title": "Create a public landing page for the app named “SW PROFESSIONAL” that clearly presents the brand and its hair-care positioning around: 0 level hair fall, smoothing hair, and strong scalp & hair.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-product-browsing-experience-that-includes-three-products-cosmetic-hair-shampoo-hair-mask-hair-serum-with-individual-product-detail-views-sections-containing-product-name-short-description-key-benefits-aligned-to-the-positioning-reduced-hair-fall-smoothing-scalp-strength-and-a-call-to-action-section-e-g-learn-more-how-to-use",
+      "title": "Add a product browsing experience that includes three products—Cosmetic Hair Shampoo, Hair Mask, Hair Serum—with individual product detail views/sections containing: product name, short description, key benefits aligned to the positioning (reduced hair fall, smoothing, scalp strength), and a call-to-action section (e.g., “Learn more” / “How to use”).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-define-and-apply-a-coherent-visual-theme-suitable-for-a-premium-cosmetic-hair-care-brand-distinct-colors-typography-spacing-components-and-enforce-it-consistently-across-the-landing-and-product-views-do-not-use-a-blue-purple-dominant-palette",
+      "title": "Define and apply a coherent visual theme suitable for a premium cosmetic hair-care brand (distinct colors, typography, spacing, components) and enforce it consistently across the landing and product views. Do not use a blue/purple-dominant palette.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-required-generated-images-as-static-assets-and-render-them-in-the-ui-hero-brand-mark-product-visuals-store-generated-images-under-frontend-public-assets-generated-and-reference-them-directly-from-the-frontend",
+      "title": "Add the required generated images as static assets and render them in the UI (hero + brand mark + product visuals). Store generated images under frontend/public/assets/generated and reference them directly from the frontend.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create core app content structure for SW PROFESSIONAL hair care products (shampoo, hair mask, hair serum) with positioning around reduced hair fall, smoothing, and scalp strength.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Implement a minimal Motoko backend endpoint that provides the product catalog data (the three products and their fields) to the frontend, so the frontend renders content from the canister rather than hardcoding it in UI components.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "SW PROFESSIONAL",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

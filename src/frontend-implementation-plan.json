@@ -1,0 +1,137 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "SW PROFESSIONAL premium hair-care product showcase (frontend)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Build a public landing page for “SW PROFESSIONAL” with clear brand positioning and navigation to product sections.",
+      "acceptanceCriteria": [
+        "The app name “SW PROFESSIONAL” is displayed prominently in the header/hero.",
+        "The landing page includes short, readable English copy describing the 3 focus outcomes: reduced hair fall, smoother hair, stronger scalp & hair.",
+        "The landing page includes clear navigation to product sections (Shampoo, Hair Mask, Hair Serum)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the public landing page structure (header + hero + positioning copy + navigation links that jump to the three product sections). Use shadcn-ui components (e.g., Button, Separator) for consistent premium UI elements; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Ensure the document title/metadata aligns with “SW PROFESSIONAL” and supports a public landing experience (English-only)."
+        },
+        {
+          "path": "frontend/src/components/TopNav.tsx",
+          "operation": "create",
+          "description": "Add a header/navigation component that prominently displays “SW PROFESSIONAL” and provides in-page navigation to Shampoo, Hair Mask, and Hair Serum sections. Use shadcn-ui components (e.g., Button) for nav actions; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement a product browsing experience for three products with consistent cards and dedicated detail sections powered by backend-fetched catalog data.",
+      "acceptanceCriteria": [
+        "Users can view a list/section of the 3 products on the main page.",
+        "Each product has a dedicated detail view/section that includes name, description, and benefits text in English.",
+        "UI uses a consistent structure across all three products (same fields and layout pattern)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useProducts.ts",
+          "operation": "create",
+          "description": "Create a React Query hook that uses the existing useActor hook to fetch the product catalog via the generated canister actor (getProducts / optionally getProductById) and exposes loading/error states for the UI."
+        },
+        {
+          "path": "frontend/src/components/ProductCard.tsx",
+          "operation": "create",
+          "description": "Create a reusable product card component showing product image, name, short description, key benefits preview, and a CTA to jump to/open the dedicated detail section. Use shadcn-ui components (e.g., Card, Button, Badge) to keep a consistent structure; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/ProductDetailsSection.tsx",
+          "operation": "create",
+          "description": "Create a dedicated detail section component per product (rendered from fetched data) including name, shortDescription, full benefits list, and a CTA area (e.g., “Learn more” / “How to use”) using an expandable pattern. Use shadcn-ui components (e.g., Accordion) for the expandable “How to use” content; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire product browsing into the landing page: fetch catalog using useProducts, render a 3-item product list, and render dedicated detail sections (with stable anchors/ids) for Shampoo, Hair Mask, and Hair Serum using the shared components. Use English-only text and keep layout consistent across products."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Apply a cohesive premium cosmetic theme (non blue/purple dominant) across landing and product views.",
+      "acceptanceCriteria": [
+        "A consistent color palette and typography style are applied across header, hero, product cards/sections, and buttons.",
+        "Theme feels “premium cosmetic” (clean, spacious, high-contrast readability).",
+        "Primary palette is not blue/purple-dominant."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Add global theme tokens/styles (Tailwind base + CSS variables if used) for a warm neutral premium palette (e.g., ivory/cream backgrounds, charcoal text, subtle gold/bronze accents) and typography defaults, ensuring no blue/purple-dominant primary colors."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Adjust/extend Tailwind theme configuration to support the premium cosmetic palette and spacing/typography choices used by the landing + product components, keeping primary styling away from blue/purple dominance."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Apply the theme consistently via Tailwind utility classes across header/hero/product sections (spacing, typography scale, button styles, card surfaces) to achieve a clean, premium cosmetic look. Use shadcn-ui components where appropriate to enforce consistent UI primitives; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add required generated images as static assets and render them in the header/hero and product visuals.",
+      "acceptanceCriteria": [
+        "All generated images are placed under frontend/public/assets/generated.",
+        "Landing/hero displays the hero banner image.",
+        "Header/brand area displays the logo image.",
+        "Each of the three products displays its corresponding product image."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/sw-professional-hero.dim_1600x900.png",
+          "operation": "create",
+          "description": "Add the generated hero banner image asset at frontend/public/assets/generated/sw-professional-hero.dim_1600x900.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/sw-professional-logo.dim_512x512.png",
+          "operation": "create",
+          "description": "Add the generated logo image asset at frontend/public/assets/generated/sw-professional-logo.dim_512x512.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/product-shampoo.dim_1024x1024.png",
+          "operation": "create",
+          "description": "Add the generated shampoo product image asset at frontend/public/assets/generated/product-shampoo.dim_1024x1024.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/product-hair-mask.dim_1024x1024.png",
+          "operation": "create",
+          "description": "Add the generated hair mask product image asset at frontend/public/assets/generated/product-hair-mask.dim_1024x1024.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/product-hair-serum.dim_1024x1024.png",
+          "operation": "create",
+          "description": "Add the generated hair serum product image asset at frontend/public/assets/generated/product-hair-serum.dim_1024x1024.png."
+        },
+        {
+          "path": "frontend/src/components/TopNav.tsx",
+          "operation": "modify",
+          "description": "Render the logo asset in the header/brand area by referencing frontend/public/assets/generated/sw-professional-logo.dim_512x512.png directly (static asset)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Render the hero banner image by referencing frontend/public/assets/generated/sw-professional-hero.dim_1600x900.png directly, and wire each product card/detail to display its corresponding product image (frontend/public/assets/generated/product-shampoo.dim_1024x1024.png, frontend/public/assets/generated/product-hair-mask.dim_1024x1024.png, frontend/public/assets/generated/product-hair-serum.dim_1024x1024.png)."
+        }
+      ]
+    }
+  ]
+}

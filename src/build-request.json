@@ -1,0 +1,124 @@
+{
+  "kind": "build_request",
+  "title": "Create SW PROFESSIONAL hair care product showcase app (Shampoo, Hair Mask, Hair Serum)",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a public landing page for the app named “SW PROFESSIONAL” that clearly presents the brand and its hair-care positioning around: 0 level hair fall, smoothing hair, and strong scalp & hair.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "my app is related to cosmetic hair shampoo, hair mask and hair serum; And its for 0 level hair fall smoothing of hair's and strong scalp and hair the name of the app will be SW PROFESSIONAL"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The app name “SW PROFESSIONAL” is displayed prominently in the header/hero.",
+        "The landing page includes short, readable English copy describing the 3 focus outcomes: reduced hair fall, smoother hair, stronger scalp & hair.",
+        "The landing page includes clear navigation to product sections (Shampoo, Hair Mask, Hair Serum)."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Add a product browsing experience that includes three products—Cosmetic Hair Shampoo, Hair Mask, Hair Serum—with individual product detail views/sections containing: product name, short description, key benefits aligned to the positioning (reduced hair fall, smoothing, scalp strength), and a call-to-action section (e.g., “Learn more” / “How to use”).",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "my app is related to cosmetic hair shampoo, hair mask and hair serum"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can view a list/section of the 3 products on the main page.",
+        "Each product has a dedicated detail view/section that includes name, description, and benefits text in English.",
+        "UI uses a consistent structure across all three products (same fields and layout pattern)."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement a minimal Motoko backend endpoint that provides the product catalog data (the three products and their fields) to the frontend, so the frontend renders content from the canister rather than hardcoding it in UI components.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend exposes at least one query method that returns the list of products with fields used by the UI (id/slug, name, description, benefits).",
+        "Frontend fetches the catalog via the generated canister actor and renders the returned data.",
+        "App loads successfully even after refresh, with product content still coming from the backend query."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Define and apply a coherent visual theme suitable for a premium cosmetic hair-care brand (distinct colors, typography, spacing, components) and enforce it consistently across the landing and product views. Do not use a blue/purple-dominant palette.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A consistent color palette and typography style are applied across header, hero, product cards/sections, and buttons.",
+        "Theme feels “premium cosmetic” (clean, spacious, high-contrast readability).",
+        "Primary palette is not blue/purple-dominant."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Add the required generated images as static assets and render them in the UI (hero + brand mark + product visuals). Store generated images under frontend/public/assets/generated and reference them directly from the frontend.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All generated images are placed under frontend/public/assets/generated.",
+        "Landing/hero displays the hero banner image.",
+        "Header/brand area displays the logo image.",
+        "Each of the three products displays its corresponding product image."
+      ]
+    }
+  ],
+  "constraints": [
+    "Use English for all user-facing text.",
+    "Backend must remain a single Motoko actor (no additional backend services).",
+    "Do not edit files under frontend immutable paths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui."
+  ],
+  "nonGoals": [
+    "E-commerce checkout, payments, shipping, or order management.",
+    "Third-party authentication providers (only Internet Identity is supported, but authentication is not required for this initial build).",
+    "Real-time chat, push notifications, or external database integrations."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Premium cosmetic hair-care hero banner with elegant studio lighting and abstract hair strands, warm neutral palette (sw-professional-hero.dim_1600x900.png)",
+      "Minimal premium wordmark logo reading “SW PROFESSIONAL”, monochrome/neutral, transparent background (sw-professional-logo.dim_512x512.png)",
+      "Product packshot-style image of a shampoo bottle, premium cosmetic style, neutral background (product-shampoo.dim_1024x1024.png)",
+      "Product packshot-style image of a hair mask jar/tub, premium cosmetic style, neutral background (product-hair-mask.dim_1024x1024.png)",
+      "Product packshot-style image of a hair serum dropper bottle, premium cosmetic style, neutral background (product-hair-serum.dim_1024x1024.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [
+      "Build a product showcase app for SW PROFESSIONAL focused on cosmetic hair shampoo, hair mask, and hair serum with messaging around reduced hair fall, smoother hair, and stronger scalp & hair."
+    ],
+    "goalsToRemove": [],
+    "preferencesToAdd": [
+      "Use English for user-facing copy.",
+      "Prefer a premium cosmetic visual theme; avoid blue/purple-dominant palettes."
+    ],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

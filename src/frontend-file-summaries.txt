@@ -1,0 +1,9 @@
+{
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for fetching products from the backend canister, including useGetProducts and useGetProductById.",
+  "frontend/src/components/TopNav.tsx": "Sticky header navigation component displaying the SW PROFESSIONAL logo and brand name with smooth scroll navigation to product sections.",
+  "frontend/src/components/ProductCard.tsx": "Reusable product card component showing product image, name, description, benefits badges, and a learn more button.",
+  "frontend/src/components/ProductDetailsSection.tsx": "Detailed product section component with large product image, full benefits list, and expandable \"How to Use\" accordion.",
+  "frontend/src/App.tsx": "Main application component with hero section, benefits overview, product cards grid, detailed product sections, and footer with backend data integration.",
+  "frontend/src/index.css": "Global styles with premium cosmetic theme using warm ivory/cream backgrounds, charcoal text, and bronze/copper accents in OKLCH color space for both light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with premium cosmetic color palette, custom font families, enhanced shadows, and design tokens."
+}
