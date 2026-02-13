@@ -1,11 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
+  "projectStateVersion": 5,
   "summary": "Build an app for SW PROFESSIONAL focused on cosmetic hair care products (shampoo, hair mask, hair serum) promoting reduced hair fall, smoother hair, and a stronger scalp.",
-  "architectural_notes": [],
+  "architectural_notes": [
+    "Adopt a dark-mode/premium dark background as the primary visual theme across landing and product views."
+  ],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Premium cosmetic hair-care hero banner with elegant studio lighting and abstract hair strands, warm neutral palette (sw-professional-hero.dim_1600x900.png)\n- Minimal premium wordmark logo reading “SW PROFESSIONAL”, monochrome/neutral, transparent background (sw-professional-logo.dim_512x512.png)\n- Product packshot-style image of a shampoo bottle, premium cosmetic style, neutral background (product-shampoo.dim_1024x1024.png)\n- Product packshot-style image of a hair mask jar/tub, premium cosmetic style, neutral background (product-hair-mask.dim_1024x1024.png)\n- Product packshot-style image of a hair serum dropper bottle, premium cosmetic style, neutral background (product-hair-serum.dim_1024x1024.png)",
   "existing_features": [
     {
       "id": "feature-create-a-public-landing-page-for-the-app-named-sw-professional-that-clearly-presents-the-brand-and-its-hair-care-positioning-around-0-level-hair-fall-smoothing-hair-and-strong-scalp-hair",
@@ -38,6 +39,22 @@
         "REQ-5"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-make-the-sw-professional-app-render-in-dark-mode-by-default-dark-background-across-the-landing-page-product-overview-cards-product-detail-sections-navigation-and-footer",
+      "title": "Make the SW PROFESSIONAL app render in dark mode by default (dark background) across the landing page, product overview cards, product detail sections, navigation, and footer.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-provided-images-are-used-throughout-the-ui-hero-banner-brand-logo-and-three-product-images-and-remain-visually-legible-on-the-dark-background-adjust-overlays-containers-if-needed-without-replacing-the-images",
+      "title": "Ensure the provided images are used throughout the UI (hero banner, brand logo, and three product images) and remain visually legible on the dark background (adjust overlays/containers if needed, without replacing the images).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -53,6 +70,12 @@
       "reqIds": [
         "REQ-3"
       ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Update the UI visual theme to use a dark background while keeping a premium cosmetic look and using the provided product/brand images.",
+      "reqIds": [],
       "status": "pending"
     }
   ],

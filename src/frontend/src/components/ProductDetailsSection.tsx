@@ -12,11 +12,11 @@ interface ProductDetailsSectionProps {
 
 export function ProductDetailsSection({ product, imageSrc, sectionId }: ProductDetailsSectionProps) {
   return (
-    <section id={sectionId} className="scroll-mt-20 py-16">
+    <section id={sectionId} className="scroll-mt-20 py-16 bg-background">
       <div className="container">
-        <Card className="overflow-hidden">
+        <Card className="overflow-hidden border-border bg-card">
           <div className="grid gap-8 md:grid-cols-2">
-            <div className="aspect-square overflow-hidden bg-muted md:aspect-auto">
+            <div className="aspect-square overflow-hidden bg-background/50 md:aspect-auto">
               <img 
                 src={imageSrc} 
                 alt={product.name}

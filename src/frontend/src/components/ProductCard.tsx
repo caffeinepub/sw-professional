@@ -11,8 +11,8 @@ interface ProductCardProps {
 
 export function ProductCard({ product, imageSrc, onLearnMore }: ProductCardProps) {
   return (
-    <Card className="overflow-hidden transition-all hover:shadow-lg">
-      <div className="aspect-square overflow-hidden bg-muted">
+    <Card className="overflow-hidden transition-all hover:shadow-xl border-border bg-card">
+      <div className="aspect-square overflow-hidden bg-background/50">
         <img 
           src={imageSrc} 
           alt={product.name}

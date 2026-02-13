@@ -33,7 +33,7 @@ function App() {
       
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-background/50 to-background z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background z-10" />
         <img 
           src="/assets/generated/sw-professional-hero.dim_1600x900.png" 
           alt="SW PROFESSIONAL Hero"
@@ -41,10 +41,10 @@ function App() {
         />
         <div className="absolute inset-0 z-20 flex items-center justify-center">
           <div className="container text-center space-y-6 px-4">
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground drop-shadow-lg">
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground drop-shadow-2xl">
               Transform Your Hair
             </h2>
-            <p className="text-lg md:text-xl text-foreground/90 max-w-2xl mx-auto drop-shadow">
+            <p className="text-lg md:text-xl text-foreground/95 max-w-2xl mx-auto drop-shadow-lg">
               Experience professional-grade hair care designed to reduce hair fall, 
               smooth every strand, and strengthen your scalp for healthier, more beautiful hair.
             </p>
@@ -53,7 +53,7 @@ function App() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-background">
         <div className="container">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-4">Our Promise</h3>
@@ -63,7 +63,7 @@ function App() {
           </div>
           
           <div className="grid gap-8 md:grid-cols-3">
-            <div className="text-center space-y-3 p-6 rounded-lg bg-card">
+            <div className="text-center space-y-3 p-6 rounded-lg bg-card border border-border">
               <div className="text-4xl font-bold text-primary">0</div>
               <h4 className="text-xl font-semibold">Level Hair Fall</h4>
               <p className="text-sm text-muted-foreground">
@@ -71,7 +71,7 @@ function App() {
               </p>
             </div>
             
-            <div className="text-center space-y-3 p-6 rounded-lg bg-card">
+            <div className="text-center space-y-3 p-6 rounded-lg bg-card border border-border">
               <div className="text-4xl font-bold text-primary">✨</div>
               <h4 className="text-xl font-semibold">Smooth Hair</h4>
               <p className="text-sm text-muted-foreground">
@@ -79,7 +79,7 @@ function App() {
               </p>
             </div>
             
-            <div className="text-center space-y-3 p-6 rounded-lg bg-card">
+            <div className="text-center space-y-3 p-6 rounded-lg bg-card border border-border">
               <div className="text-4xl font-bold text-primary">💪</div>
               <h4 className="text-xl font-semibold">Strong Scalp</h4>
               <p className="text-sm text-muted-foreground">
@@ -93,7 +93,7 @@ function App() {
       <Separator />
 
       {/* Products Overview Section */}
-      <section className="py-16">
+      <section className="py-16 bg-background">
         <div className="container">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-4">Our Products</h3>
@@ -141,10 +141,10 @@ function App() {
       ))}
 
       {/* Footer */}
-      <footer className="border-t bg-muted/30 py-12 mt-16">
+      <footer className="border-t bg-card py-12 mt-16">
         <div className="container">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 bg-background/50 px-4 py-2 rounded-lg">
               <img 
                 src="/assets/generated/sw-professional-logo.dim_512x512.png" 
                 alt="SW PROFESSIONAL" 
